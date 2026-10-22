@@ -1,1 +1,629 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marwadi University - Computer Engineering</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background-color: #064b87;
+            color: white;
+            text-align: center;
+            padding: 22px 15px 18px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #053d70;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        nav ul li a:hover {
+            background-color: #0874c9;
+        }
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 25px auto;
+        }
+
+        /* =========================
+           SECTION CARD
+        ========================= */
+
+        .section {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 18px;
+            padding: 22px;
+        }
+
+        .section h2 {
+            color: #064b87;
+            font-size: 19px;
+            margin-bottom: 12px;
+            border-left: 4px solid #064b87;
+            padding-left: 10px;
+        }
+
+        .section p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        /* =========================
+           MISSION
+        ========================= */
+
+        .mission-list {
+            padding-left: 22px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .mission-list li {
+            margin-bottom: 7px;
+        }
+
+        /* =========================
+           PSO
+        ========================= */
+
+        .pso-list {
+            padding-left: 22px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .pso-list li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           COURSES
+        ========================= */
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .course {
+            border: 1px solid #ddd;
+            padding: 14px;
+            background-color: #fafafa;
+            font-size: 14px;
+        }
+
+        .course strong {
+            color: #064b87;
+        }
+
+        /* =========================
+           IMAGE GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* =========================
+           RECRUITERS
+        ========================= */
+
+        .recruiters {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .recruiter {
+            border: 1px solid #ddd;
+            background-color: #fafafa;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .recruiter:hover {
+            background-color: #eef6ff;
+            color: #064b87;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #064b87;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .recruiters {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            header p {
+                font-size: 13px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 10px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .container {
+                width: 94%;
+                margin-top: 15px;
+            }
+
+            .section {
+                padding: 16px;
+            }
+
+            .section h2 {
+                font-size: 17px;
+            }
+
+            .courses {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item img {
+                height: 210px;
+            }
+
+            .recruiters {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <h1>Marwadi University</h1>
+
+        <p>
+            Department of Computer Engineering
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#vision">Vision</a>
+            </li>
+
+            <li>
+                <a href="#mission">Mission</a>
+            </li>
+
+            <li>
+                <a href="#pso">Program Specific Outcomes</a>
+            </li>
+
+            <li>
+                <a href="#courses">Courses Offered</a>
+            </li>
+
+            <li>
+                <a href="#gallery">Events</a>
+            </li>
+
+            <li>
+                <a href="#recruiters">Top Recruiters</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- VISION -->
+
+        <section id="vision" class="section">
+
+            <h2>Vision</h2>
+
+            <p>
+                To impart quality technical education through research,
+                innovation, and teamwork for creating professionally superior
+                and ethically strong manpower that meets the global challenges
+                of engineering industries and research organizations.
+            </p>
+
+        </section>
+
+
+        <!-- MISSION -->
+
+        <section id="mission" class="section">
+
+            <h2>Mission</h2>
+
+            <ul class="mission-list">
+
+                <li>
+                    Maintain state-of-the-art ICT enabled teaching and learning methodologies.
+                </li>
+
+                <li>
+                    Enable graduates to become agile thinkers, innovators, and professionals.
+                </li>
+
+                <li>
+                    Provide skills, knowledge, and abilities for success as engineers,
+                    leaders, and entrepreneurs.
+                </li>
+
+                <li>
+                    Prepare graduates for lifelong learning and career challenges.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- PROGRAM SPECIFIC OUTCOMES -->
+
+        <section id="pso" class="section">
+
+            <h2>Program Specific Outcomes (PSOs)</h2>
+
+            <ol class="pso-list">
+
+                <li>
+                    Apply knowledge and competence in the design and development
+                    of computer-based systems addressing industrial and social needs.
+                </li>
+
+                <li>
+                    Adapt to emerging technological advancements including
+                    cybersecurity, AR/VR, and IoT.
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- COURSES -->
+
+        <section id="courses" class="section">
+
+            <h2>Courses Offered</h2>
+
+            <div class="courses">
+
+                <div class="course">
+                    <strong>B.Tech in Computer Engineering</strong>
+                </div>
+
+                <div class="course">
+                    <strong>B.Tech in Cyber Security</strong>
+                </div>
+
+                <div class="course">
+                    <strong>M.Tech in Computer Engineering</strong>
+                </div>
+
+                <div class="course">
+                    <strong>Ph.D. in Computer Science & Engineering</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENT GALLERY -->
+
+        <section id="gallery" class="section">
+
+            <h2>Image Gallery of Events</h2>
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
+                        alt="College Event"
+                    >
+
+                    <p>Student Activities</p>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80"
+                        alt="College Seminar"
+                    >
+
+                    <p>Technical Seminar</p>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+                        alt="College Function"
+                    >
+
+                    <p>College Function</p>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80"
+                        alt="Technical Event"
+                    >
+
+                    <p>Technical Event</p>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=800&q=80"
+                        alt="Students"
+                    >
+
+                    <p>Student Gathering</p>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80"
+                        alt="Workshop"
+                    >
+
+                    <p>Workshop</p>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+                        alt="Team Event"
+                    >
+
+                    <p>Team Activities</p>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
+                        alt="Education Event"
+                    >
+
+                    <p>Academic Event</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOP RECRUITERS -->
+
+        <section id="recruiters" class="section">
+
+            <h2>Top Recruiters</h2>
+
+            <div class="recruiters">
+
+                <div class="recruiter">
+                    TCS
+                </div>
+
+                <div class="recruiter">
+                    Infosys
+                </div>
+
+                <div class="recruiter">
+                    Wipro
+                </div>
+
+                <div class="recruiter">
+                    Capgemini
+                </div>
+
+                <div class="recruiter">
+                    L&T
+                </div>
+
+                <div class="recruiter">
+                    Cognizant
+                </div>
+
+                <div class="recruiter">
+                    Reliance Industries
+                </div>
+
+                <div class="recruiter">
+                    Accenture
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 Marwadi University -
+        Department of Computer Engineering
+
+    </footer>
+
+
+</body>
+</html>
